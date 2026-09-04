@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivitha | Student Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+  position:relative;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at top left, rgba(255,244,220,0.38), transparent 18%),
+    radial-gradient(circle at bottom right, rgba(205,176,143,0.24), transparent 20%),
+    linear-gradient(135deg, #f2e7d5 0%, #d9b99a 40%, #b89978 80%, #a47f61 100%);
+  color:#3f2c1c;
+}
+
+body::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 25%, rgba(255,255,255,0.24), transparent 18%),
+    radial-gradient(circle at 80% 15%, rgba(220,190,155,0.18), transparent 22%),
+    radial-gradient(circle at 60% 75%, rgba(187,153,118,0.18), transparent 20%);
+  opacity:0.75;
+  pointer-events:none;
+  animation:floatBG 18s ease-in-out infinite;
+  z-index:-1;
+}
+
+@keyframes floatBG{
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.02); }
+}
+
+.circle{
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  top:-50px;
+  left:-40px;
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 0 80px rgba(255,255,255,0.18);
+  z-index:0;
+}
+
+.circle2{
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  bottom:20px;
+  right:30px;
+  background: rgba(255,255,255,0.14);
+  box-shadow: 0 0 80px rgba(255,255,255,0.12);
+  z-index:0;
+}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  position:relative;
+  z-index:1;
+}
+
+.logo{
+  font-size:32px;
+  font-weight:700;
+  color:#4a3727;
+}
+
+nav a{
+  color:#4a3727;
+  text-decoration:none;
+  margin-left:22px;
+  font-weight:600;
+  transition:color .25s;
+}
+
+nav a:hover{
+  color:#8d6c4f;
+}
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+  position:relative;
+  z-index:1;
+}
+
+.hero-content{
+  max-width:700px;
+  background:rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.24);
+  backdrop-filter:blur(14px);
+  border-radius:30px;
+  padding:40px 30px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.14);
+}
+
+.hero img{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  border:5px solid rgba(255,255,255,0.9);
+  object-fit:cover;
+  margin-bottom:20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.18);
+}
+
+.hero h1{
+  font-size:56px;
+  letter-spacing:1px;
+  color:#4a3727;
+}
+
+.hero h3{
+  margin-top:12px;
+  color:#8d6c4f;
+  font-size:22px;
+}
+
+.hero p{
+  margin-top:22px;
+  line-height:1.9;
+  font-size:18px;
+  color:#5d432d;
+}
+
+.menu{
+  padding:70px 8%;
+}
+
+.menu h2{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:40px;
+  color:#4a3727;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:transparent;
+  border:none;
+  padding:0;
+  box-shadow:none;
+}
+
+.card-box{
+  background: rgba(255,255,255,0.18);
+  border:1px solid rgba(255,255,255,0.26);
+  backdrop-filter: blur(14px);
+  padding:34px 24px;
+  border-radius:26px;
+  min-height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  transition:.35s transform, .35s background, .35s border-color, .35s box-shadow;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.14);
+}
+
+.card-box:hover{
+  transform: translateY(-10px);
+  background: rgba(255,255,255,0.26);
+  border-color: rgba(255,255,255,0.34);
+  box-shadow: 0 25px 55px rgba(0,0,0,0.18);
+}
+
+.card-box a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  color:#5d432d;
+  text-decoration:none;
+  font-size:22px;
+  font-weight:700;
+}
+
+.card-box a span{
+  display:block;
+  padding:16px 20px;
+  background: transparent;
+  border-radius:18px;
+  color:#5d432d;
+  font-size:18px;
+  font-weight:600;
+  width:100%;
+  max-width:220px;
+}
+
+
+footer{
+  text-align:center;
+  padding:25px;
+  margin-top:40px;
+  color:#4a3727;
+}
+</style>
+</head>
+<body>
+
+<div class="circle"></div>
+<div class="circle2"></div>
+
+<header>
+  <div class="logo">My Portfolio</div>
+  <nav><a href="index1.html">Home</a></nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <img src="profile1.jpg" alt="Profile">
+    <h1>Nivitha</h1>
+    <h3>FROM Artificial Intelligence & Data Science</h3>
+    <p>Hello! I'm an enthusiastic engineering student passionate about Artificial Intelligence, Web Development, Programming, and Technology. I enjoy learning new skills, creating projects, and constantly improving myself.</p>
+  </div>
+</section>
+
+<section class="menu">
+  <h2>Explore</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-box">
+        <a href="achievements.html">
+          🏆
+          <span>ACHIEVEMENTS</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="capabilities.html">
+          💻
+          <span>CAPABILITIES</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="school.html">
+          🏫
+          <span>SCHOOL</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="college.html">
+          🎓
+          <span>COLLEGE</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="interests.html">
+          🎨
+          <span>Personal Interests</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="highlights.html">
+          📸
+          <span>HIGHLIGHTS</span>
+        </a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-box">
+        <a href="outreach.html">
+          📞
+          <span>OUTREACH</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Nivitha
+</footer>
+
+</body>

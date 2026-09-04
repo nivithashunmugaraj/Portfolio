@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hobbies | Student Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#4F46E5,#7C3AED,#06B6D4);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px;
+overflow:hidden;
+}
+
+/* Doodle Background */
+
+.circle1{
+position:absolute;
+width:220px;
+height:220px;
+border:3px dashed rgba(255,255,255,.25);
+border-radius:50%;
+top:-60px;
+left:-60px;
+}
+
+.circle2{
+position:absolute;
+width:180px;
+height:180px;
+border:3px solid rgba(255,255,255,.20);
+border-radius:50%;
+bottom:-40px;
+right:-40px;
+}
+
+.wave{
+position:absolute;
+width:280px;
+height:280px;
+border:3px solid rgba(255,255,255,.12);
+border-radius:45%;
+top:45%;
+left:-120px;
+transform:rotate(25deg);
+}
+
+.container{
+width:950px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:25px;
+color:white;
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+h1{
+text-align:center;
+font-size:40px;
+margin-bottom:35px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(255,255,255,.18);
+padding:25px;
+border-radius:18px;
+text-align:center;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+background:rgba(255,255,255,.28);
+}
+
+.card i{
+font-size:45px;
+color:#FFE082;
+margin-bottom:15px;
+}
+
+.card h2{
+margin-bottom:10px;
+font-size:22px;
+}
+
+.card p{
+font-size:15px;
+line-height:1.6;
+}
+
+.button{
+display:inline-block;
+margin-top:35px;
+padding:12px 30px;
+background:white;
+color:#4F46E5;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:.3s;
+}
+
+.button:hover{
+background:#FFE082;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="circle1"></div>
+<div class="circle2"></div>
+<div class="wave"></div>
+
+<div class="container">
+
+<h1>🎨 My Hobbies</h1>
+
+<div class="grid">
+
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<h2>Coding</h2>
+<p>I enjoy creating websites and learning new programming languages.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-book"></i>
+<h2>Reading</h2>
+<p>I like reading books and articles related to technology and self-improvement.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-microphone"></i>
+<h2>Singing</h2>
+<p>I love to sing and enjoy my own company.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-music"></i>
+<h2>Listening to Music</h2>
+<p>Music helps me relax, stay focused, and refresh my mind.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-camera"></i>
+<h2>Photography</h2>
+<p>I enjoy capturing beautiful moments and memorable experiences.</p>
+</div>
+
+<div class="card">
+<i class="fas fa-lightbulb"></i>
+<h2>Learning New Skills</h2>
+<p>I love exploring new technologies and continuously improving my knowledge.</p>
+</div>
+
+</div>
+
+<center>
+<a href="index1.html" class="button">⬅ Back to Home</a>
+</center>
+
+</div>
+
+</body>
+</html>
